@@ -68,15 +68,14 @@ export function WorkoutCalendar({ markedDates, records, onDayPress, selectedDate
   return (
     <View style={styles.container}>
       <Calendar
-        current="2026-01-01"
+        current={selectedDate}
         minDate="2026-01-01"
         maxDate="2026-12-31"
         onDayPress={onDayPress}
         markedDates={markedDates}
         firstDay={1}
         enableSwipeMonths={true}
-        hideExtraDays={true}
-        dayComponent={({ date }) => renderDay(date as DateData)}
+        hideExtraDays={false}
         monthFormat={'yyyy年 MM月'}
         theme={{
           backgroundColor: '#ffffff',
